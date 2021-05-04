@@ -18,7 +18,7 @@ import traceback
 import numpy as np
 import tensorflow as tf
 import PIL.Image
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
+import stylegan_encoder.dnnlib.tflib as tflib
 
 from familyGan.stylegan_encoder.training import dataset
 

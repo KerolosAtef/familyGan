@@ -3,8 +3,8 @@ import sys
 import bz2
 import argparse
 from keras.utils import get_file
-from familyGan.stylegan_encoder.ffhq_dataset.face_alignment import image_align
-from familyGan.stylegan_encoder.ffhq_dataset.landmarks_detector import LandmarksDetector
+from stylegan_encoder.ffhq_dataset.face_alignment import image_align
+from stylegan_encoder.ffhq_dataset.landmarks_detector import LandmarksDetector
 import multiprocessing
 
 LANDMARKS_MODEL_URL = 'http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2'

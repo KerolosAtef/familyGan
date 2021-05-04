@@ -4,13 +4,13 @@ import os
 from PIL import Image
 import numpy as np
 from config import URL_PRETRAINED_RESNET, PerceptParam
-from familyGan.pipeline import align_image, image2latent, latent2image, image_list2latent_old, latent_list2image_list
+from pipeline import align_image, image2latent, latent2image, image_list2latent_old, latent_list2image_list
 import time
 from keras.applications.resnet50 import preprocess_input
 from keras.models import load_model
-from familyGan.stylegan_encoder.training.misc import load_pkl, save_pkl
-from familyGan.stylegan_encoder import dnnlib
-from familyGan.stylegan_encoder.encoder.perceptual_model import load_images
+from stylegan_encoder.training.misc import load_pkl, save_pkl
+from stylegan_encoder import dnnlib
+from stylegan_encoder.encoder.perceptual_model import load_images
 
 # region Run Param
 ITER = 250

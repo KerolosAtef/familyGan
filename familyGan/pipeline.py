@@ -9,14 +9,14 @@ from PIL import Image
 import pickle
 
 from config import URL_VGG_16
-from familyGan import config
-import familyGan.stylegan_encoder.config as stylgan_config
-import familyGan.stylegan_encoder.dnnlib as dnnlib
-from familyGan.models.simple_avarage import SimpleAverageModel
-from familyGan.multiproc_util import parmap
-from familyGan.stylegan_encoder.encoder.generator_model import Generator
-from familyGan.stylegan_encoder.encoder.perceptual_model import PerceptualModel, PerceptualModelOld
-from familyGan.stylegan_encoder.ffhq_dataset.face_alignment import image_align_from_image
+import config
+import stylegan_encoder.config as stylgan_config
+import stylegan_encoder.dnnlib as dnnlib
+from models.simple_avarage import SimpleAverageModel
+from multiproc_util import parmap
+from stylegan_encoder.encoder.generator_model import Generator
+from stylegan_encoder.encoder.perceptual_model import PerceptualModel, PerceptualModelOld
+from stylegan_encoder.ffhq_dataset.face_alignment import image_align_from_image
 from stylegan_encoder.encode_images import split_to_batches
 
 os.environ['TF_ENABLE_AUTO_MIXED_PRECISION'] = '1'
@@ -81,7 +81,7 @@ def image2latent(img_list, iterations=750, init_dlatents: Optional[np.ndarray] =
     """
     :return: sizes of (batch_size, img_height, img_width, 3), (batch_size, 18, 512)
     """
-    batch_size = len(img_list)
+    batch_size = 256
     args = config.DEFAULT_PERC_PARAM if args is None else args
     config.init_generator(batch_size=batch_size)
     # generator = config.generator  # TODO: messes with parallel

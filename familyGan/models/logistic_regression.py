@@ -1,7 +1,7 @@
 from sklearn.linear_model import LogisticRegression
 
-from familyGan.load_data import load_false_triplets
-from familyGan.models.basic_family_regressor import BasicFamilyReg
+from load_data import load_false_triplets
+from models.basic_family_regressor import BasicFamilyReg
 import numpy as np
 
 class LogisticRegressor(BasicFamilyReg):

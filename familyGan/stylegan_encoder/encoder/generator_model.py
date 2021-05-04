@@ -3,7 +3,7 @@ from typing import Optional
 
 import tensorflow as tf
 import numpy as np
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
+import stylegan_encoder.dnnlib.tflib as tflib
 from functools import partial
 
 

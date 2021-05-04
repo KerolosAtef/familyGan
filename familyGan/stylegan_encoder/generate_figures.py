@@ -11,9 +11,9 @@ import os
 import pickle
 import numpy as np
 import PIL.Image
-import familyGan.stylegan_encoder.dnnlib as dnnlib
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
-import familyGan.stylegan_encoder.config as config
+import stylegan_encoder.dnnlib as dnnlib
+import stylegan_encoder.dnnlib.tflib as tflib
+import stylegan_encoder.config as config
 
 #----------------------------------------------------------------------------
 # Helpers for loading and using pre-trained generators.

@@ -14,10 +14,10 @@ import re
 import numpy as np
 from collections import defaultdict
 import PIL.Image
-import familyGan.stylegan_encoder.dnnlib as dnnlib
+import stylegan_encoder.dnnlib as dnnlib
 
-import familyGan.stylegan_encoder.config as config
-from familyGan.stylegan_encoder.training import dataset
+import stylegan_encoder.config as config
+from stylegan_encoder.training import dataset
 
 #----------------------------------------------------------------------------
 # Convenience wrappers for pickle that are able to load data produced by

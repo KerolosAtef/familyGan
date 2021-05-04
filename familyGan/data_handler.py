@@ -6,8 +6,8 @@ import pandas as pd
 from PIL import Image
 from math import ceil
 
-from familyGan import config
-from familyGan.config import DATA_DIR_PATH, FAMILYGAN_DIR_PATH
+import config
+from config import DATA_DIR_PATH, FAMILYGAN_DIR_PATH
 
 
 class dataHandler:

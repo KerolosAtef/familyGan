@@ -1,4 +1,4 @@
-﻿# Copyright (c) 2019, NVIDIA CORPORATION. All rights reserved.
+# Copyright (c) 2019, NVIDIA CORPORATION. All rights reserved.
 #
 # This work is licensed under the Creative Commons Attribution-NonCommercial
 # 4.0 International License. To view a copy of this license, visit
@@ -73,7 +73,7 @@ def absolute_name_scope(scope: str) -> tf.name_scope:
 
 def absolute_variable_scope(scope: str, **kwargs) -> tf.compat.v1.variable_scope:
     """Forcefully enter the specified variable scope, ignoring any surrounding scopes."""
-    return tf.compat.v1.variable_scope(tf.VariableScope(name=scope, **kwargs), auxiliary_name_scope=False)
+    return tf.compat.v1.variable_scope(tf.compat.v1.VariableScope(name=scope, **kwargs), auxiliary_name_scope=False)
 
 
 def _sanitize_tf_config(config_dict: dict = None) -> dict:
@@ -94,7 +94,7 @@ def _sanitize_tf_config(config_dict: dict = None) -> dict:
 def init_tf(config_dict: dict = None) -> None:
     """Initialize TensorFlow session using good default settings."""
     # Skip if already initialized.
-    if tf.get_default_session() is not None:
+    if tf.compat.v1.get_default_session() is not None:
         return
 
     # Setup config dict and random seeds.
@@ -106,7 +106,7 @@ def init_tf(config_dict: dict = None) -> None:
     if tf_random_seed == "auto":
         tf_random_seed = np.random.randint(1 << 31)
     if tf_random_seed is not None:
-        tf.set_random_seed(tf_random_seed)
+        tf.compat.v1.set_random_seed(tf_random_seed)
 
     # Setup environment variables.
     for key, value in list(cfg.items()):
@@ -121,7 +121,7 @@ def init_tf(config_dict: dict = None) -> None:
 
 def assert_tf_initialized():
     """Check that TensorFlow session has been initialized."""
-    if tf.get_default_session() is None:
+    if tf.compat.v1.get_default_session() is None:
         raise RuntimeError("No default TensorFlow session found. Please call dnnlib.tflib.init_tf().")
 
 

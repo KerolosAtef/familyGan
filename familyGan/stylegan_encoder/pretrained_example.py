@@ -13,10 +13,10 @@ import numpy as np
 import PIL.Image
 from PIL import Image
 
-import familyGan.stylegan_encoder.dnnlib as dnnlib
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
-import familyGan.stylegan_encoder.config as config
-from familyGan.stylegan_encoder.training import misc
+import stylegan_encoder.dnnlib as dnnlib
+import stylegan_encoder.dnnlib.tflib as tflib
+import stylegan_encoder.config as config
+from stylegan_encoder.training import misc
 
 
 

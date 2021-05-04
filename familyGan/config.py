@@ -4,16 +4,16 @@ from typing import Optional
 
 import numpy as np
 import pickle
-from familyGan.stylegan_encoder import dnnlib
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
-from familyGan.stylegan_encoder import config
+from stylegan_encoder import dnnlib
+import stylegan_encoder.dnnlib.tflib as tflib
+from stylegan_encoder import config
 import sys
 
-from familyGan.stylegan_encoder.align_images import unpack_bz2, LANDMARKS_MODEL_URL
+from stylegan_encoder.align_images import unpack_bz2, LANDMARKS_MODEL_URL
 from keras.utils import get_file
-from familyGan.stylegan_encoder.ffhq_dataset.landmarks_detector import LandmarksDetector
+from stylegan_encoder.ffhq_dataset.landmarks_detector import LandmarksDetector
 
-from familyGan.stylegan_encoder.encoder.generator_model import Generator
+from stylegan_encoder.encoder.generator_model import Generator
 
 sys.modules['dnnlib'] = dnnlib
 sys.modules['tflib'] = tflib

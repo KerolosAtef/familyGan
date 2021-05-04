@@ -9,9 +9,9 @@ import pickle
 import cv2
 import argparse
 
-import familyGan.stylegan_encoder.config as config
-import familyGan.stylegan_encoder.dnnlib as dnnlib
-import familyGan.stylegan_encoder.dnnlib.tflib as tflib
+import stylegan_encoder.config as config
+import stylegan_encoder.dnnlib as dnnlib
+import stylegan_encoder.dnnlib.tflib as tflib
 
 import tensorflow
 import keras

@@ -1,6 +1,6 @@
-from familyGan.models.basic_family_regressor import BasicFamilyReg
+from models.basic_family_regressor import BasicFamilyReg
 import numpy as np
-from familyGan import config
+import config
 
 
 class SimpleAverageModel(BasicFamilyReg):

@@ -1,7 +1,7 @@
 from unittest import TestCase
 import numpy as np
 
-from familyGan.models.regressor_and_direction import ChildLoss, np2torch
+from models.regressor_and_direction import ChildLoss, np2torch
 
 
 class TestChildLoss(TestCase):
